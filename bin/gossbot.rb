@@ -58,7 +58,7 @@ class Gossbot
       end
     end
 
-    if @config['room_name'] =~ /@/
+    if @config['msg_on_start'] && @config['room_name'] =~ /@/
       @jabber.send_chat(@config['room_name'], 'started')
     end
 

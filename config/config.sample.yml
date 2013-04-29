@@ -13,6 +13,7 @@ emotes: ["loves", "waves at", "hugs", "really likes", "is amused by", "giggles a
 people: ["Bob", "John", "Larry", "Susan"]
 required_kick_votes: 3
 debug: false
+msg_on_start: false
 ask_omegle:
   timeout: 20
   retry:    3
