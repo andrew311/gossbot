@@ -58,6 +58,10 @@ class Gossbot
       end
     end
 
+    if @config['room_name'] =~ /@/
+      @jabber.send_chat(@config['room_name'], 'started')
+    end
+
     @jabber.wait
   end
 
@@ -381,6 +385,12 @@ class Gossbot
         end
         respond(msg, answer ? answer : "Sorry, no answer.")
         return
+      end
+
+      # exit
+      if /^\s*gossbot exit\s*$/i.match(stmt)
+        respond(msg, "exiting")
+        Process.exit!(0)
       end
 
       # answer who is questions

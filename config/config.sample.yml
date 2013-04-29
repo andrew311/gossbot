@@ -4,7 +4,7 @@
 account: "somechatbot@gmail.com"
 password: "SomeSecretPassword"
 do_speak: true
-room_name: "OurChatRoom"
+room_name: "OurChatRoom@im.example.com"
 invincible_aliases: ["ThisBot"]
 msgs_until_refresh: 50
 speak_likelyhood: 100
